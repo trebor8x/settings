@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
   finish
@@ -43,7 +45,6 @@ endif
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
   filetype off
-  call pathogen#runtime_append_all_bundles()
 
   " Enable file type detection.
   " Use the default filetype settings, so that mail gets 'tw' set to 72,
@@ -134,3 +135,6 @@ nmap <silent> <c-n> :NERDTreeToggle<CR>
 " enable 256 colors for vim
 set t_Co=256
 color Mustang
+
+" correct syntax highlighting sign column
+highlight clear SignColumn
