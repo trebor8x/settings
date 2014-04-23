@@ -138,3 +138,6 @@ color Mustang
 
 " correct syntax highlighting sign column
 highlight clear SignColumn
+
+" turn off vim-gitgutter by default
+let g:gitgutter_enabled = 0
