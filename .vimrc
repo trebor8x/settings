@@ -160,3 +160,5 @@ let g:ctrlp_user_command = {
       \ },
       \ 'fallback': 'find %s -type f'
       \ }
+" set shortcut for gundo
+nnoremap <F6> :GundoToggle<CR>
