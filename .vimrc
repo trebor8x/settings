@@ -84,6 +84,8 @@ endif
 
 " show line numbers
 set number
+" highlight lines with more than 80 characters
+set colorcolumn=80
 
 set tabstop=2
 set shiftwidth=2
