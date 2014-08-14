@@ -25,6 +25,9 @@ colorscheme Mustang
 "correct syntax highlighting sign column
 highlight clear SignColumn
 
+" tone down ruler (ColorColumn)
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
+
 "let guifontpp_size_increment=2
 "let guifontpp_smaller_font_map="<C-p>"
 "let guifontpp_larger_font_map="<C-+>"

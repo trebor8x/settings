@@ -84,8 +84,6 @@ endif
 
 " show line numbers
 set number
-" highlight lines with more than 80 characters
-set colorcolumn=80
 
 set tabstop=2
 set shiftwidth=2
@@ -121,6 +119,7 @@ vnoremap <tab> %
 set wrap
 set textwidth=79
 set formatoptions=qrn1
+set colorcolumn=+1
 
 " open a new vertical split and switch over to it
 nnoremap <leader>w <C-w>v<C-w>l
@@ -140,6 +139,9 @@ color Mustang
 
 " correct syntax highlighting sign column
 highlight clear SignColumn
+
+" tone down ruler (ColorColumn)
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
 " turn off vim-gitgutter by default
 let g:gitgutter_enabled = 0
