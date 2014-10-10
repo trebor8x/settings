@@ -32,3 +32,8 @@ highlight ColorColumn ctermbg=235 guibg=#2c2d27
 "let guifontpp_smaller_font_map="<C-p>"
 "let guifontpp_larger_font_map="<C-+>"
 "let guifontpp_original_font_map="<C-=>"
+
+"remove right-hand scroll bar
+:set guioptions-=r
+"remove left-hand scroll bar
+:set guioptions-=L
