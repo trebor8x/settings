@@ -10,5 +10,8 @@ fi
 
 HISTSIZE=40000
 
+# Set standard editor
+export EDITOR=vim
+
 # User specific aliases and functions
 export PATH="~/.living-in-a-box/bin:$PATH"
