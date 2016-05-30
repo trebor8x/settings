@@ -166,3 +166,7 @@ let g:ctrlp_user_command = {
       \ }
 " set shortcut for gundo
 nnoremap <F6> :GundoToggle<CR>
+
+" split below and to the right
+set splitbelow
+set splitright
