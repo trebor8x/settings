@@ -170,3 +170,6 @@ nnoremap <F6> :GundoToggle<CR>
 " split below and to the right
 set splitbelow
 set splitright
+
+" expand bp
+abbreviate bp require 'pry'; binding.pry
