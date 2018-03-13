@@ -149,21 +149,6 @@ let g:gitgutter_enabled = 0
 " exclude files or directories
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
-" set some ctrlp-specific ignores
-let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-      \ 'file': '\v\.(exe|so|dll)$',
-      \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
-      \ }
-" specify an external tool for ctrlp to use for listing files instead of using
-" Vim's globpath()
-let g:ctrlp_user_command = {
-      \ 'types': {
-        \ 1: ['.git', 'cd %s && git ls-files'],
-        \ 2: ['.hg', 'hg --cwd %s locate -I .'],
-      \ },
-      \ 'fallback': 'find %s -type f'
-      \ }
 " set shortcut for gundo
 nnoremap <F6> :GundoToggle<CR>
 
