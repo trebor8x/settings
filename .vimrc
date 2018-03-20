@@ -143,12 +143,6 @@ highlight clear SignColumn
 " tone down ruler (ColorColumn)
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
-" turn off vim-gitgutter by default
-let g:gitgutter_enabled = 0
-
-" exclude files or directories
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-
 " set shortcut for gundo
 nnoremap <F6> :GundoToggle<CR>
 
@@ -158,3 +152,25 @@ set splitright
 
 " expand bp
 abbreviate bp require 'pry'; binding.pry
+
+" fzf shortcut
+nmap <leader>f :FZF<CR>
+
+" Customize fzf colors to match your color scheme
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+" Enable fzf per-command history
+let g:fzf_history_dir = '~/.local/share/fzf-history'
