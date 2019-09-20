@@ -15,7 +15,7 @@ export PATH
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
-HISTSIZE=40000
+HISTSIZE=50000
 
 # Set standard editor
 export EDITOR=vim
