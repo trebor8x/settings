@@ -125,6 +125,7 @@ set colorcolumn=+1
 nnoremap <leader>w <C-w>v<C-w>l
 
 " ack search shortcut
+let g:ackprg = 'rg --vimgrep --no-heading --hidden'
 nnoremap <leader>a :Ack 
 
 " switch current directory to the one the file beeing edited resides in
