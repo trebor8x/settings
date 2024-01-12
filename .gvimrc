@@ -1,5 +1,3 @@
-execute pathogen#infect()
-
 set ch=2		" Make command line two lines high
 
 set mousehide		" Hide the mouse when typing text
@@ -21,14 +19,6 @@ if version >= 500
 endif
 
 set guifont=Ubuntu\ Mono\ 12
-
-colorscheme Mustang
-
-"correct syntax highlighting sign column
-highlight clear SignColumn
-
-" tone down ruler (ColorColumn)
-highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
 "let guifontpp_size_increment=2
 "let guifontpp_smaller_font_map="<C-p>"

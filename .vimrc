@@ -1,5 +1,3 @@
-execute pathogen#infect()
-
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
   finish
@@ -138,28 +136,20 @@ set colorcolumn=+1
 " open a new vertical split and switch over to it
 nnoremap <leader>w <C-w>v<C-w>l
 
-" ack search shortcut
-let g:ackprg = 'rg --vimgrep --no-heading --hidden'
-nnoremap <leader>a :Ack 
-
 " switch current directory to the one the file beeing edited resides in
 nmap <silent> <Leader>cd :cd %:p:h<CR>
 
 " NERDTree shortcut
 nmap <silent> <c-n> :NERDTreeToggle<CR>
 
-" enable 256 colors for vim
-set t_Co=256
-color Mustang
+if (has("termguicolors"))
+  set termguicolors
+endif
+autocmd vimenter * ++nested colorscheme gruvbox
+set background=dark
 
-" correct syntax highlighting sign column
-highlight clear SignColumn
-
-" tone down ruler (ColorColumn)
-highlight ColorColumn ctermbg=235 guibg=#2c2d27
-
-" set shortcut for gundo
-nnoremap <F6> :GundoToggle<CR>
+" set shortcut for undotree
+nnoremap <F6> :UndotreeToggle<CR>
 
 " split below and to the right
 set splitbelow
@@ -170,22 +160,11 @@ abbreviate bp require 'pry'; binding.pry
 
 " fzf shortcut
 nmap <leader>f :FZF<CR>
-
-" Customize fzf colors to match your color scheme
-let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'border':  ['fg', 'Ignore'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
+nmap <leader>g :Rg<CR>
 
 " Enable fzf per-command history
 let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+let $FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
+" Use morhetz/gruvbox color theme in fzf
+let $FZF_DEFAULT_OPTS='--color=bg+:#3c3836,bg:#32302f,spinner:#fb4934,hl:#928374,fg:#ebdbb2,header:#928374,info:#8ec07c,pointer:#fb4934,marker:#fb4934,fg+:#ebdbb2,prompt:#fb4934,hl+:#fb4934'
