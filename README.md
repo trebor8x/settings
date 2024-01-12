@@ -11,5 +11,4 @@ To checkout in the (non-empty!) home directory execute:
     git pull origin master
     git branch --set-upstream-to=origin/master master
     # checkout submodules:
-    git submodule init
-    git submodule update
+    git submodule update --init --recursive
