@@ -159,8 +159,9 @@ set splitright
 abbreviate bp require 'pry'; binding.pry
 
 " fzf shortcut
-nmap <leader>f :FZF<CR>
-nmap <leader>g :Rg<CR>
+nnoremap <leader>f :FZF<CR>
+nnoremap <leader>a :Rg<CR>
+nnoremap <leader>A :Rg <C-R><C-W><CR>
 
 " Enable fzf per-command history
 let g:fzf_history_dir = '~/.local/share/fzf-history'
@@ -168,3 +169,6 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 let $FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 " Use morhetz/gruvbox color theme in fzf
 let $FZF_DEFAULT_OPTS='--color=bg+:#3c3836,bg:#32302f,spinner:#fb4934,hl:#928374,fg:#ebdbb2,header:#928374,info:#8ec07c,pointer:#fb4934,marker:#fb4934,fg+:#ebdbb2,prompt:#fb4934,hl+:#fb4934'
+
+" git shortcut
+nnoremap <leader>g :Git<space>
