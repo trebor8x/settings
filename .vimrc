@@ -172,3 +172,7 @@ let $FZF_DEFAULT_OPTS='--color=bg+:#3c3836,bg:#32302f,spinner:#fb4934,hl:#928374
 
 " git shortcut
 nnoremap <leader>g :Git<space>
+
+" for vim-go configure gopls to use gofumpt
+let g:go_fmt_command="gopls"
+let g:go_gopls_gofumpt=1
